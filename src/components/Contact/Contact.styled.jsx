@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const User = styled.p`
-  width: 300px;
+  width: 400px;
   height: 20px;
   margin-bottom: 20px;
   font-size: 18px;

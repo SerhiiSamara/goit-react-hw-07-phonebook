@@ -21,7 +21,7 @@ export const ContactForm = () => {
       alert(`${form.elements.name.value} is already in contacts.`);
       return;
     }
-    dispatch(addContact(form.elements.name.value, form.elements.number.value));
+    dispatch(addContact({name:form.elements.name.value, phone:form.elements.number.value}));
     setName('');
     setNumber('');
   };

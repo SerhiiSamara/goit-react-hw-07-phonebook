@@ -33,7 +33,7 @@ export const App = () => {
       ) : (
         'Sorry. Your phonebok is empty.'
       )}
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && <h4>Request in progress...</h4>}
       <GlobalStyle />
     </>
   );
