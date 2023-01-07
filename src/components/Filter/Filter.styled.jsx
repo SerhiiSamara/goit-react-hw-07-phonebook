@@ -8,6 +8,5 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  display: block;
   margin-top: 10px;
 `;

@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 import { Label, Form, Input } from './ContactForm.styled';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -21,7 +21,12 @@ export const ContactForm = () => {
       alert(`${form.elements.name.value} is already in contacts.`);
       return;
     }
-    dispatch(addContact({name:form.elements.name.value, phone:form.elements.number.value}));
+    dispatch(
+      addContact({
+        name: form.elements.name.value,
+        phone: form.elements.number.value,
+      })
+    );
     setName('');
     setNumber('');
   };
